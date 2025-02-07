@@ -1,5 +1,4 @@
 package book;
-
 public class Book {
 	public Book(String title, String author, String ISBN, double price) {
 		this.title = title;
@@ -40,6 +39,11 @@ public class Book {
 	}
 	public void setPrice(double price) {
 		this.price = price;
+	}
+	@Override
+	public String toString() {
+		String formattedPrice = String.format("%.2f", price);
+		return  title + " by " + author + " (ISBN: " + ISBN + " , $" + formattedPrice + ")";
 	}
 	
 	
