@@ -6,12 +6,24 @@ public class Book {
 		this.ISBN = ISBN;
 		this.price = price;
 	}
+	public Book() {
+		this.title = "Unknown";
+		this.author = "Unknown";
+		this.ISBN = "Unknown";
+		this.price = 0;
+	}
 	
-	
-	private String title = "Unknown";
-	private String author = "Unknown";
-	private String ISBN = "Unknown";
-	private double price = 0.0;
+	public Book(Book original) {
+		this.title = original.title;
+		this.author = original.author;
+		ISBN = original.ISBN;
+		this.price = original.price;
+	}
+
+	private String title;
+	private String author;
+	private String ISBN;
+	private double price;
 	
 	
 	
