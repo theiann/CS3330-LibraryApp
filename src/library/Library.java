@@ -7,6 +7,17 @@ public class Library {
 	private Book[] books = new Book[5];
 	private int count= 0;
 	
+	/**
+	 * 
+	 * This method will add a book to the created "books" array 
+	 * 
+	 * @param count 
+	 * 				This argument will hold the number of books that are in the array 
+	 * @return
+	 * 				Return false if there is no more space to be added in the array.
+	 * 				Returns true if the book is successfully added
+	 */
+	
 	public boolean addBook(Book book) {
 		if(count == 5) 
 		{
@@ -18,18 +29,5 @@ public class Library {
 		System.out.println("Book added successfully!");
 		return true; 
 	}
-	
-	public boolean removeBook(Book book) {
-		for(int i=0; i<5; i++) {
-			if(book.equals(books[i]))
-			{
-				books[i]= null;
-				System.out.println("Book successfully removed!");
-				count--;
-				return true; 
-			}
-		}
-		System.out.println("Book does not exist!");
-		return false; 
-	}
 }
+
