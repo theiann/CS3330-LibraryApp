@@ -1,4 +1,7 @@
 package book;
+
+import java.util.Objects;
+
 public class Book {
 	public Book(String title, String author, String ISBN, double price) {
 		this.title = title;
@@ -57,6 +60,25 @@ public class Book {
 		String formattedPrice = String.format("%.2f", price);
 		return  title + " by " + author + " (ISBN: " + ISBN + " , $" + formattedPrice + ")";
 	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(ISBN);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Book other = (Book) obj;
+		return Objects.equals(ISBN, other.ISBN);
+	}
+	
+	
+	
+	
 	
 	
 	
