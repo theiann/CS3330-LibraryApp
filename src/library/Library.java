@@ -80,6 +80,7 @@ public void displayBooks() {
 	
 	if (count==0) {
 		System.out.println("The library is Empty.");
+		return;
 	}
 	System.out.println("All books in the library:");
 	for (int i=0;i<count;i++) {
