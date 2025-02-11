@@ -40,6 +40,7 @@ public boolean removeBook(Book book) {
 	for(int i=0; i<count; i++) { 
 		if(book.equals(books[i]))
 		{ 
+			System.out.println("Removing book \"" + books[i].toString() + "\"");
 			for(int j=i; j<count-1; j++) {
 				books[j]= books[j+1];
 			}
@@ -48,7 +49,7 @@ public boolean removeBook(Book book) {
 			return true;    
 			}   
 		}  
-
+		System.out.println("Cannot remove book \"" + book.toString() + "\"");
 		return false;   
 	} 
 

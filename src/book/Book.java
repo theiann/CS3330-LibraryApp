@@ -64,6 +64,7 @@ public class Book {
 	public int hashCode() {
 		return Objects.hash(ISBN);
 	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
