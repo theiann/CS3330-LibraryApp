@@ -49,7 +49,7 @@ public boolean removeBook(Book book) {
 			}   
 		}  
 
-return false;   
+		return false;   
 	} 
 
 /**
@@ -64,7 +64,7 @@ public Book searchByISBN(String ISBN) {
 	if(ISBN == null) {
 		return null; 
 	}
-	for (int i=0; i<5; i++) {
+	for (int i=0; i<count; i++) {
 		if (ISBN.equals(books[i].getISBN())) {
 			return books[i];
 		}
@@ -76,10 +76,11 @@ public Book searchByISBN(String ISBN) {
  * this method simply calls the to string function in the Book class for each book in the library and then prints info about them
  */
 public void displayBooks() {
+	
 	if (count==0) {
 		System.out.println("The library is Empty.");
 	}
-	
+	System.out.println("All books in the library:");
 	for (int i=0;i<count;i++) {
 		System.out.printf("%d. %s%n", 1+i, books[i].toString());  
 	}
