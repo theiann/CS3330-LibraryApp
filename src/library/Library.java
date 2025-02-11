@@ -72,6 +72,18 @@ public Book searchByISBN(String ISBN) {
 	return null;
 }
 
+/**
+ * this method simply calls the to string function in the Book class for each book in the library and then prints info about them
+ */
+public void displayBooks() {
+	if (count==0) {
+		System.out.println("The library is Empty.");
+	}
+	
+	for (int i=0;i<count;i++) {
+		System.out.printf("%d. %s%n", 1+i, books[i].toString());  
+	}
+}
 
 
 }
